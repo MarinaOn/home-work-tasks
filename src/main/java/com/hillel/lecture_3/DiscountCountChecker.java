@@ -1,5 +1,6 @@
 package com.hillel.lecture_3;
 
+import com.sun.deploy.security.SelectableSecurityManager;
 import io.qameta.allure.Step;
 
 /**
@@ -13,6 +14,12 @@ public class DiscountCountChecker {
 //        TODO implements result
         double result = 0.0;
 
-        return result;
+        if (price > 1000D) {
+            return result = (price - (price * 0.15D));
+        } else {
+            return result = 0.0D;
+        }
+
+
     }
 }

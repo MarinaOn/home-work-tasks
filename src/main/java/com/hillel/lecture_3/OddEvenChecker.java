@@ -12,7 +12,13 @@ public class OddEvenChecker {
 
 //        TODO implements result
         String result = "";
+        if(number % 2 == 0) {
+            return result = "Even Number";
 
-        return result;
+        } else  {
+            return result = "Odd Number";
+
+        }
+
     }
 }

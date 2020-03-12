@@ -8,11 +8,15 @@ import io.qameta.allure.Step;
 public class PassFailChecker {
 
     @Step
-    public String checkNumber(int number) {
+    public String checkNumber(int mark) {
 
 //        TODO implements result
         String result = "";
-
-        return result;
+        if (mark >= 50) {
+            return result = "PASS";
+        } else {
+            return result = "FAIL";
+        }
     }
 }
+

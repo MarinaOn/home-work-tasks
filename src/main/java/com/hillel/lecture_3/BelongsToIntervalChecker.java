@@ -9,9 +9,12 @@ public class BelongsToIntervalChecker {
 
     @Step
     public String checkNumberInInterval(int from, int to, int number) {
-
         String result = "";
+        if (from <= number && number <= to) {
+            return result = "Number " + number + " belong to interval [" + from + ";" + to + "]";
+        } else {
+            return result = "Number " + number + " not belong to interval [" + from + ";" + to + "]";
+        }
 
-        return result;
     }
 }
