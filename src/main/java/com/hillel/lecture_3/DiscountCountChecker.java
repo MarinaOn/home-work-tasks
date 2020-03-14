@@ -1,6 +1,5 @@
 package com.hillel.lecture_3;
 
-import com.sun.deploy.security.SelectableSecurityManager;
 import io.qameta.allure.Step;
 
 /**
@@ -19,7 +18,5 @@ public class DiscountCountChecker {
         } else {
             return result = 0.0D;
         }
-
-
     }
 }
