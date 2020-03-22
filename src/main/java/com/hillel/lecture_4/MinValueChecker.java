@@ -9,11 +9,16 @@ public class MinValueChecker {
 
     @Step
     public int getValue(int[] values) {
-
-//        TODO implements result
+        int[] data = values;
         int result = 0;
 
-        return result;
+        for (int i = 0; i < data.length; i++) {
+
+            if (result > data[i]) {
+                result = data[i];
+            }
+        } return result;
+
     }
 
 }
