@@ -1,5 +1,7 @@
 package com.hillel.basic.exam;
 
+import java.util.StringJoiner;
+
 /**
  * Description:
  * We want to generate a function that computes the series starting from 0 and ending until the given number following the sequence:
@@ -25,6 +27,16 @@ package com.hillel.basic.exam;
 public class SequenceSum {
 
     public static String showSequence(int value) {
-        return null;
+
+        if(value == 0)
+            return "0 = 0";
+        if(value < 0)
+            return "" + value + " < 0";
+        StringJoiner result = new StringJoiner("+", "", " = ");
+        int sum = 0;
+        for(int i = 0; i <= value; sum += i, i++)
+            result.add(""+i);
+        return result.toString() + sum;
+
     }
 }
