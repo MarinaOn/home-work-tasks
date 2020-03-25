@@ -18,6 +18,7 @@ package com.hillel.basic.exam;
 public class NumberRotator {
 
     public static long rotate(long n) {
+
         String number = String.valueOf(n);
         for (int i = 0; i < number.length() - 1; i++) {
             number = number.substring(0, i) +
@@ -26,6 +27,7 @@ public class NumberRotator {
 
             if (Long.parseLong(number) > n) {
                 n = Long.parseLong(number);
+
             }
         }
         return n;
