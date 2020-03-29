@@ -13,7 +13,20 @@ public class SquareWordPatternChecker {
 
 //        TODO implements result
         String result = "";
+        char temp;
+        char[] wordCharArray = word.toCharArray();
 
+        for (int i = 0; i < word.length() ; i++) {
+            if (i!=0) {
+                temp = wordCharArray[0];
+                for (int j = 0; j < wordCharArray.length - 1; j++) {
+                    wordCharArray[j] = wordCharArray[j + 1];
+                }
+                wordCharArray[wordCharArray.length - 1] = temp;
+            }
+            result = result + new String(wordCharArray);
+            if (i!=word.length()-1) result = result + ", ";
+        }
         return result;
     }
 
