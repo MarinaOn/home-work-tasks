@@ -22,26 +22,26 @@ public class BinaryToDecimalChecker {
             temp = value % 2;
             result = result + temp * (int) Math.pow(10, powerNum);
             powerNum++;
-            value = value/2;
+            value = dividedByNumber (value,2);
         }
         return result;
-
     }
-
-
 
     @Step
     public int fromBinaryToDecimal(int value) {
 
-//        TODO implements result
         int result = 0;
-
         int powerNum = 0;
         while (value > 0) {
-            if (value % 2 != 0) {result = result + (int) pow(2, powerNum);}
+            if (value % 2 != 0) {result = result + (int) Math.pow(2, powerNum);}
             powerNum++;
-            value = value/10;
+            value = dividedByNumber (value,10);
         }
+        return result;
+    }
+
+    public static int dividedByNumber (int value, int number) {
+        int result =  value/number;
         return result;
     }
 }

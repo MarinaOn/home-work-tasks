@@ -10,30 +10,38 @@ public class SquareAndCircleChecker {
     @Step
     public String checkCircleInSquare(double circleArea, double squareArea) {
 
-//        TODO implements result
+        return getResult(circleArea, squareArea);
+    }
 
-        double angle = Math.sqrt(squareArea) / 2;
-        double radius = Math.sqrt(circleArea / Math.PI);
+    public static String getResult(double circleArea, double squareArea){
+        double back = Math.sqrt(squareArea)/2;
+        double radius = Math.sqrt(circleArea/Math.PI);
         String result = "";
-
-        if (radius <= angle) {
-            return result = "The circle is in the square";
+        if (radius <= back) {
+            result = ("The circle is in the square");
         } else {
-            return result = "The circle is not in the square";
+            result = ("The circle is not in the square");
         }
 
+        return result;
     }
 
     @Step
     public String checkSquareInCircle(double circleArea, double squareArea) {
 
 //        TODO implements result
-        String result = "";
-
-        if ((Math.PI * squareArea) < (2 * circleArea)) {
-            return result = "The square is in the circle";
-        } else {
-            return result = "The square is not in the circle";
-        }
+        return getRes(circleArea, squareArea);
     }
+    public static String getRes(double circleArea, double squareArea){
+        double diagonal = Math.sqrt(2*squareArea);
+        double D = 2*Math.sqrt(circleArea/Math.PI);
+        String result = "";
+        if (diagonal <= D) {
+            result = ("The square is in the circle");
+        } else {
+            result = ("The square is not in the circle");
+        }
+        return result;
+    }
+
 }

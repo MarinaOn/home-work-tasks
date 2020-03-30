@@ -11,12 +11,16 @@ public class TriangleChecker {
     public String isTriangleIsosceles(int a, int b, int c) {
 
 //        TODO implements result
+        return getResult(a,b,c);
+    }
+    public static String getResult(int a, int b, int c){
         String result = "";
-        if ((a == b ) || (a == c) || (b == c)) {
-            return result = "Isosceles triangle!";
-
+        if(a == b || a == c || b==c){
+            result = "Isosceles triangle!";
         } else {
-            return result = "No isosceles triangle!";
+            result = "No isosceles triangle!";
         }
+
+        return result;
     }
 }

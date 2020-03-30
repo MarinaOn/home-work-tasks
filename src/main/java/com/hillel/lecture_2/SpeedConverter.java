@@ -7,18 +7,18 @@ import io.qameta.allure.Step;
  */
 public class SpeedConverter {
 
+    public static final double COEFFICIENT_KILOMETERS_MILES = 0.6214;
     @Step
     public double speedKmToMi(double speedKm) {
 //        TODO implements result
-        double result = (speedKm * 0.62139999999999995);
+        double result = speedKm * COEFFICIENT_KILOMETERS_MILES;
         return result;
     }
 
     @Step
     public double speedMiToKm(double speedMi) {
 //        TODO implements result
-        double result = (speedMi / 0.6214);
+        double result = speedMi / COEFFICIENT_KILOMETERS_MILES;
         return result;
     }
-
-}
+    }
